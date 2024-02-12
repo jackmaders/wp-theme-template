@@ -1,3 +1,17 @@
 {
-  "name": "wp-theme-template"
+  "name": "wp-theme-template",
+  "version": "1.0.0",
+  "description": "Boilerplate template for a Wordpress Theme using Vite, Typescript, & Tailwind CSS.",
+  "keywords": [
+    "wordpress",
+    "vite",
+    "tailwindcss",
+    "typescript",
+    "boilerplate",
+    "template"
+  ],
+  "homepage": "https://github.com/jackmaders/wp-theme-template",
+  "main": "/src/index.ts",
+  "author": "Jack Maders",
+  "license": "MIT"
 }
