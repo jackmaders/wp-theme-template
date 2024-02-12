@@ -11,8 +11,8 @@ export default ({ mode }) => {
       outDir: process.env.VITE_OUTPUT_DIR ?? "dist",
       emptyOutDir: true,
       lib: {
-        entry: resolve(__dirname, "src/main.ts"),
-        name: "main",
+        entry: resolve(__dirname, "src/index.ts"),
+        formats: ["es"],
       },
       rollupOptions: {
         output: {
