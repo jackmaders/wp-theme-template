@@ -17,6 +17,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc && vite build",
+    "dev": "tsc && vite build --watch",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint --fix --ignore-path .gitignore  **/*.{ts,js}",
     "lint:prettier": "prettier . --write"
