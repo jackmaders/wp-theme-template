@@ -16,13 +16,21 @@
   "author": "Jack Maders",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint --fix --ignore-path .gitignore  **/*.{ts,js}",
+    "lint:prettier": "prettier . --write"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "fast-glob": "^3.3.2",
     "postcss-import": "^16.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1",
     "tailwindcss-full-bleed": "^2.0.1",
     "typescript": "^5.3.3",
