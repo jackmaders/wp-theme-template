@@ -7,10 +7,10 @@
 
 <body>
     <main class="container">
-        <?php get_template_part("templates/navigation"); ?>
+        <?php get_template_part("templates-parts/navigation"); ?>
 
 
-        <?php get_template_part("templates/footer"); ?>
+        <?php get_template_part("templates-parts/footer"); ?>
     </main>
 
 
