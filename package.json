@@ -18,10 +18,11 @@
   "scripts": {
     "build": "tsc && vite build",
     "dev": "tsc && vite build --watch",
-    "lint": "npm run lint:php && npm run lint:eslint && npm run lint:prettier",
-    "lint:php": "phplint 'theme/**/*.php'",
-    "lint:eslint": "eslint --fix --ignore-path .gitignore  **/*.{ts,js}",
-    "lint:prettier": "prettier . --write"
+    "lint": "npm run lint:php && npm run lint:javascript && npm run lint:css && npm run format",
+    "lint:php": "phplint **/*.php",
+    "lint:javascript": "eslint --fix --ignore-path .gitignore **/*.{ts,js}",
+    "lint:css": "stylelint --fix --ignore-path .gitignore **/*.css",
+    "format": "prettier . --write"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.22.2",
@@ -35,6 +36,8 @@
     "phplint": "^2.0.5",
     "postcss-import": "^16.0.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
     "tailwindcss": "^3.4.1",
     "tailwindcss-full-bleed": "^2.0.1",
     "typescript": "^5.3.3",
