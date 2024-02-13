@@ -15,7 +15,7 @@ function tutorial_register_styles()
         "main",
         get_template_directory_uri() . "/assets/css/style.css",
         [],
-        $version
+        $version,
     );
 }
 
@@ -27,7 +27,7 @@ function tutorial_register_scripts()
         "main",
         get_template_directory_uri() . "/assets/js/index.js",
         [],
-        $version
+        $version,
     );
 }
 
