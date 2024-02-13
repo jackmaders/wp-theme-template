@@ -5,10 +5,17 @@ import { defineConfig, loadEnv } from "vite";
 export default ({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
+  const wpThemesDir = process.env.VITE_WORDPRESS_THEMES_DIR;
+  const packageName = process.env.npm_package_name ?? "wp-theme";
+
+  console.log(wpThemesDir, packageName);
+
+  const outDir = wpThemesDir ? `${wpThemesDir}/${packageName}` : "dist";
+
   return defineConfig({
     publicDir: "theme",
     build: {
-      outDir: process.env.VITE_OUTPUT_DIR ?? "dist",
+      outDir,
       emptyOutDir: true,
       lib: {
         entry: resolve(__dirname, "src/index.ts"),

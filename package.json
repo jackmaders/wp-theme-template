@@ -17,7 +17,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "tsc && vite build --watch",
+    "build:watch": "tsc && vite build --watch",
     "lint": "npm run lint:php && npm run lint:javascript && npm run lint:css && npm run format",
     "lint:php": "phplint **/*.php",
     "lint:javascript": "eslint --fix --ignore-path .gitignore **/*.{ts,js}",
