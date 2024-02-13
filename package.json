@@ -18,10 +18,10 @@
   "scripts": {
     "build": "tsc && vite build",
     "build:watch": "tsc && vite build --watch",
-    "lint": "npm run lint:php && npm run lint:javascript && npm run lint:css && npm run format",
+    "lint": "npm run lint:php && npm run lint:eslint && npm run lint:stylelint && npm run format",
     "lint:php": "phplint **/*.php",
-    "lint:javascript": "eslint --fix --ignore-path .gitignore **/*.{ts,js}",
-    "lint:css": "stylelint --fix --ignore-path .gitignore **/*.css",
+    "lint:eslint": "eslint --fix --ignore-path .gitignore **/*.{ts,js}",
+    "lint:stylelint": "stylelint --fix --ignore-path .gitignore **/*.css",
     "format": "prettier . --write"
   },
   "devDependencies": {
@@ -42,5 +42,8 @@
     "tailwindcss-full-bleed": "^2.0.1",
     "typescript": "^5.3.3",
     "vite": "^5.1.1"
+  },
+  "engines": {
+    "node": "*"
   }
 }
