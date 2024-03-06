@@ -1,6 +1,6 @@
 <?php
 
-function threeGen_register_styles()
+function template_register_styles()
 {
     $version = wp_get_theme()->get("Version");
 
@@ -12,7 +12,7 @@ function threeGen_register_styles()
     );
 }
 
-function threeGen_register_scripts()
+function template_register_scripts()
 {
     $version = wp_get_theme()->get("Version");
 
@@ -24,12 +24,12 @@ function threeGen_register_scripts()
     );
 }
 
-function threeGen_meta_viewport()
+function template_meta_viewport()
 {
     echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 }
 
-add_action("wp_enqueue_scripts", "threeGen_register_styles");
-add_action("wp_enqueue_scripts", "threeGen_register_scripts");
+add_action("wp_enqueue_scripts", "template_register_styles");
+add_action("wp_enqueue_scripts", "template_register_scripts");
 
-add_action("wp_head", "threeGen_meta_viewport", 1);
+add_action("wp_head", "template_meta_viewport", 1);
