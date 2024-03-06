@@ -1,4 +1,14 @@
 .navigation-menu {
+  @apply flex flex-col overflow-hidden;
+  @apply md:flex-row md:gap-4;
+}
+
+.navigation-menu li:last-child {
+  @apply mb-4;
+}
+
+.navigation-menu li.current_page_item a {
+  @apply font-bold;
 }
 
 .navigation-menu li a {

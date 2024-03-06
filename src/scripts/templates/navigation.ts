@@ -1,16 +1,15 @@
-/* TODO: two-level menus */
 export default function navigation(element: HTMLElement) {
-  const toggleButton = element.querySelector("button.toggle-button");
-  const dropdownMenu = element.querySelector("div.dropdown-menu");
+  const toggleButton = element.querySelector("[data-ref='toggle-button']");
 
   toggleButton?.addEventListener("click", () => {
-    dropdownMenu?.classList.toggle("max-lg:grid-rows-0fr");
-    dropdownMenu?.classList.toggle("max-lg:grid-rows-1fr");
+    element.classList.toggle("max-md:grid-rows-navbar-closed");
+    element.classList.toggle("max-md:grid-rows-navbar-open");
+
     toggleButton?.classList.toggle(
-      "after:mask-[url('/src/images/svg/bars-3.svg')]",
+      "after:mask-[url('/src/images/heroicons/bars-3.svg')]",
     );
     toggleButton?.classList.toggle(
-      "after:mask-[url('/src/images/svg/x-mark.svg')]",
+      "after:mask-[url('/src/images/heroicons/x-mark.svg')]",
     );
   });
 }

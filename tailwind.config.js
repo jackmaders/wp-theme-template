@@ -11,6 +11,15 @@ module.exports = {
         "2xl": "6rem",
       },
     },
+    extend: {
+      gridTemplateRows: {
+        "navbar-open": "min-content 1fr",
+        "navbar-closed": "min-content 0fr",
+      },
+      content: {
+        empty: '""',
+      },
+    },
   },
   plugins: [
     require("tailwindcss-full-bleed"),
