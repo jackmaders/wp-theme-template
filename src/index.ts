@@ -1,4 +1,6 @@
+import templates from "./scripts/templates/_index_";
 import "./styles/main.css";
-import main from "./scripts/main.ts";
 
-main();
+window.addEventListener("load", () => {
+  templates();
+});

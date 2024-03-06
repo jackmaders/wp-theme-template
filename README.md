@@ -93,23 +93,33 @@ npm run format
 ```bash
 📁.vscode                       # vscode settings
 📁src                           # front-end project
-└── 📁scripts                   # styling code
-    └── 📄main.ts               # typescript entrypoint
+└── 📁images                    # images to be processed by vite
+    └── 📁brands                # brand logos
+    └── 📁heroicons             # svg icons
+└── 📁scripts                   # typescript
+    └── 📁templates             # template-specific typescript
+        └── 📄_index_.ts        # dynamic imports for template scripts
 └── 📁styles                    # styling code
-    └── 📄main.css              # css entrypoint
+    └── 📁plugins               # plugin-specific styling
     └── 📁tailwind              # tailwind-specific styling
-        └── 📄base.css          # define base styling for tailwind
-        └── 📄components.css    # define component classes for tailwind
-        └── 📄utilities.css     # define additional utilities for tailwind
+        └── 📄base.css          # define base styling
+        └── 📄components.css    # define component classes
+        └── 📄utilities.css     # define additional utilities
+    └── 📁templates             # template-specific styling
+    └── 📄main.css              # css entrypoint
 └── 📄index.ts                  # vite entrypoint
 📁theme                         # wordpress theme files
-└── 📁template-parts            # repeated markup across templates
+└── 📁functions                 # wordpress functionality
+    └── 📄head.php              # add metadata and scripts to <head/>
+    └── 📄theme_support.php     # define functionality for theme
+└── 📁templates                 # repeated markup across pages
     └── 📄footer.php            # footer template
+    └── 📄hero.php              # hero template
     └── 📄navigation.php        # navbar template
 └── 📄404.php                   # page-not-found template
 └── 📄archive.php               # post listing template
 └── 📄front-page.php            # home page template
-└── 📄functions.php             # wordpress functionality
+└── 📄functions.php             # import files in /functions
 └── 📄home.php                  # latest posts template
 └── 📄index.php                 # fallback template
 └── 📄search.php                # search results template
@@ -119,6 +129,7 @@ npm run format
 📄.eslintrc                     # eslint config
 📄.gitignore                    # globs for git to ignore
 📄.postcssrc                    # postcss config for tailwind
+📄.prettierignore               # globs for prettier to ignore
 📄.prettierrc                   # prettier config
 📄.stylelintrc                  # stylelint config
 📄LICENSE                       # License file

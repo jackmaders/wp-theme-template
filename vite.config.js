@@ -8,8 +8,6 @@ export default ({ mode }) => {
   const wpThemesDir = process.env.VITE_WORDPRESS_THEMES_DIR;
   const packageName = process.env.npm_package_name ?? "wp-theme";
 
-  console.log(wpThemesDir, packageName);
-
   const outDir = wpThemesDir ? `${wpThemesDir}/${packageName}` : "dist";
 
   return defineConfig({

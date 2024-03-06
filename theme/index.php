@@ -1,21 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <?php wp_head(); ?>
-</head>
+  </head>
 
-<body>
-    <main class="container">
-        <?php get_template_part("templates-parts/navigation"); ?>
-
-
-        <?php get_template_part("templates-parts/footer"); ?>
+  <body>
+    <!-- prettier-ignore -->
+    <main class="">
+      <?php get_template_part("templates/navigation"); ?>
+      <?php get_template_part("templates/hero"); ?>
+      <?php the_content(); ?>
+      <?php get_template_part("templates/footer"); ?>
     </main>
 
-
     <?php wp_footer(); ?>
-</body>
-
-
+  </body>
 </html>
