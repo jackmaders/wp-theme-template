@@ -44,5 +44,8 @@
   },
   "engines": {
     "node": "*"
+  },
+  "dependencies": {
+    "@pyncz/tailwind-mask-image": "^2.0.0"
   }
 }
